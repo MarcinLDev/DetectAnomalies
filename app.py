@@ -300,13 +300,8 @@ liczba_niskie  = (dane_wyniki["Ocena_modelu"] == "🟢 Niskie ryzyko").sum()
 liczba_razem   = len(dane_wyniki)
 
 # ============ NAGŁÓWEK + KPI ============
-kol_logo, kol_tytul = st.columns([0.10, 0.90])
-with kol_logo:
-    if os.path.exists(SCIEZKA_LOGO):
-        st.image(SCIEZKA_LOGO, use_column_width=True)
-with kol_tytul:
-    st.title("AI – Predykcja awarii sieci wodno-kanalizacyjnej")
-    st.caption("Zrozumiała analiza ryzyka dla gminy – priorytety inwestycyjne, sandbox „co-jeśli” oraz raport PDF.")
+st.title("AI – Predykcja awarii sieci wodno-kanalizacyjnej")
+st.caption("Zrozumiała analiza ryzyka dla gminy – priorytety inwestycyjne, sandbox „co-jeśli” oraz raport PDF.")
 
 kol1, kol2, kol3, _ = st.columns([1,1,1,0.3])
 klasa_czer = "karta-kpi kpi-czerw puls" if liczba_wysokie > 0 else "karta-kpi kpi-czerw"
