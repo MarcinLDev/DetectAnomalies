@@ -22,7 +22,7 @@ Projekt prezentuje interaktywny dashboard Streamlit do oceny ryzyka awarii w sie
 ### Tabela TOP elementów
 ![Dashboard – TOP tabela](assets/screens/dashboard_4.png)
 
-## ⚙️ Technologie
+## Technologie
 
 - Python 3.10+
 - Streamlit
@@ -32,7 +32,7 @@ Projekt prezentuje interaktywny dashboard Streamlit do oceny ryzyka awarii w sie
 - ReportLab (PDF)
 - Kaleido (eksport wykresów do PNG)
 
-## 🚀 Uruchomienie
+## Uruchomienie
 
 1. Zainstaluj zależności:
 
