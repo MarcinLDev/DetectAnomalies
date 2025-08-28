@@ -12,8 +12,8 @@ Projekt prezentuje interaktywny dashboard Streamlit do oceny ryzyka awarii w sie
 
 ## 📸 Zrzuty ekranu
 
-### 🔧 Ustawienia + Podsumowanie ryzyka
-![Dashboard – podsumowanie](assets/screens/dashboard_1.png)
+### 📊 Ustawienia + Podsumowanie ryzyka
+![Podsumowanie ryzyka](assets/screens/dashboard_1.png)
 
 ### 📊 Czynniki wpływające na ryzyko
 ![Dashboard – wykres ważności cech](assets/screens/dashboard_2.png)
