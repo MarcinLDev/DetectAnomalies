@@ -1,8 +1,8 @@
-# 💧 AI – Predykcja awarii sieci wodno-kanalizacyjnej
+# AI – Predykcja awarii sieci wodno-kanalizacyjnej
 
 Projekt prezentuje interaktywny dashboard Streamlit do oceny ryzyka awarii w sieciach wodno‑kanalizacyjnych z wykorzystaniem modeli uczenia maszynowego (Random Forest). Aplikacja umożliwia analizę danych, predykcję ryzyka, symulacje „co‑jeśli” oraz eksport raportu PDF.
 
-## 🧠 Kluczowe funkcje
+## Kluczowe funkcje
 
 - Klasyfikacja ryzyka awarii: niskie / średnie / wysokie
 - Sandbox „co‑jeśli” (interaktywna symulacja)
@@ -10,21 +10,17 @@ Projekt prezentuje interaktywny dashboard Streamlit do oceny ryzyka awarii w sie
 - Eksport do PDF i CSV
 - Live demo (opcjonalnie)
 
-## 📸 Zrzuty ekranu
-
-### 📊 Ustawienia + Podsumowanie ryzyka
+### Ustawienia + Podsumowanie ryzyka
 ![Podsumowanie ryzyka](assets/screens/dashboard_1.png)
 
-### 📊 Czynniki wpływające na ryzyko
+### Czynniki wpływające na ryzyko
 ![Dashboard – wykres ważności cech](assets/screens/dashboard_2.png)
 
-### 🧪 Tryb „co‑jeśli” + Miernik ryzyka
+### Tryb „co‑jeśli” + Miernik ryzyka
 ![Dashboard – tryb symulacji](assets/screens/dashboard_3.png)
 
-### 🔝 Tabela TOP elementów
+### Tabela TOP elementów
 ![Dashboard – TOP tabela](assets/screens/dashboard_4.png)
-
-> 📁 Umieść zrzuty ekranu w folderze: `assets/screens/`
 
 ## ⚙️ Technologie
 
