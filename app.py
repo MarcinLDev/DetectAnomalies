@@ -312,7 +312,7 @@ with kol3: st.markdown(f'<div class="karta-kpi kpi-ziel">🟢 Niskie ryzyko<br><
 st.markdown(f"<div class='podpis'>Łącznie elementów: <b>{liczba_razem}</b>. Progi: średnie ≥ {prog_sredni}%, wysokie ≥ {prog_wysoki}%.</div>", unsafe_allow_html=True)
 
 # st.subheader("🗺️ Network map (illustrative)")
-st.image("C:/Users/marci/airflow/simulation_case_study/DetectionAnomali/assets/mapa_siec.png", use_container_width=True)
+st.image("assets/3!.png", use_container_width=True)
 
 # st.divider()
 
@@ -517,25 +517,22 @@ st.divider()
 # ============ POBIERANIE: CSV + PDF ============
 bajty_csv = dane_wyniki.to_csv(index=False).encode("utf-8")
 
-# używamy wykres_pizza utworzonego wyżej + wykres_waznosc z sekcji wcześniejszej
-try:
-    bajty_pdf = zbuduj_pdf(
-        dane_wyniki,
-        {"wysokie": liczba_wysokie, "srednie": liczba_srednie, "niskie": liczba_niskie, "razem": liczba_razem},
-        wykres_pizza, wykres_waznosc
-    )
-except Exception as e:
-    bajty_pdf = None
-    st.warning("Nie udało się wygenerować PDF. Zainstaluj 'kaleido' i 'reportlab'. "
-               f"Szczegóły: {e}")
 
-kol_dl1, kol_dl2 = st.columns(2)
-with kol_dl1:
-    st.download_button("⬇️ Pobierz wyniki (CSV)", data=bajty_csv,
-                       file_name="wyniki_ryzyka_sieci.csv", mime="text/csv", use_container_width=True)
-with kol_dl2:
-    if bajty_pdf is not None:
-        st.download_button("📄 Pobierz raport PDF (kolorowy)", data=bajty_pdf,
-                           file_name="raport_AI_siec_wod_kan.pdf", mime="application/pdf", use_container_width=True)
-    else:
-        st.info("PDF jest niedostępny – doinstaluj pakiety: `pip install reportlab kaleido`.")
+st.sidebar.markdown("---")
+st.sidebar.subheader("Pobierz wyniki")
+
+st.sidebar.download_button(
+    "📊 Pobierz CSV",
+    data=bajty_csv,
+    file_name="wyniki_ryzyka_sieci.csv",
+    mime="text/csv",
+    use_container_width=True
+)
+
+st.sidebar.download_button(
+    "📄 Pobierz raport PDF",
+    data=bajty_csv,   # tutaj później podmienisz na bajty_pdf
+    file_name="raport_AI_siec_wod_kan.pdf",
+    mime="text/csv",
+    use_container_width=True
+)
