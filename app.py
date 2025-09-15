@@ -55,6 +55,10 @@ def wstaw_logo_fixed(logo_path=SCIEZKA_LOGO, link="#", wysokosc=48):
 
 wstaw_logo_fixed()
 
+st.markdown("""
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.344.0/font/lucide.css">
+""", unsafe_allow_html=True)
+
 # ============ GLOBALNY STYL – „Anthropic-light inspired” ============
 st.markdown(r"""
 <style>
@@ -67,6 +71,7 @@ st.markdown(r"""
   --card:#ffffff;
   --accent-gray:#9CA3AF;
 }
+
 
 /* tło główne + sidebar */
 .stApp{ background:var(--bg)!important; color:var(--ink)!important; }
@@ -149,20 +154,36 @@ div[data-testid="stTable"] > div{
   background:#f7f8fa; border-color:#d1d5db;
 }
 
-/* nawigacja w sidebarze */
-.sidebar-nav{ margin:6px 0 14px 0; }
+/* nawigacja w sidebarze – styl systemowy z ikonami */
+.sidebar-nav{ margin:8px 0 16px 0; }
 .sidebar-nav a{
-  display:flex; align-items:center; gap:8px;
+  display:flex; align-items:center; gap:10px;
   width:100%;
-  padding:10px 12px; margin-bottom:8px;
+  padding:10px 14px; margin-bottom:10px;
   font-weight:600;
+  font-size:14px;
   color:var(--ink); text-decoration:none;
-  border:1px solid var(--border); border-radius:12px;
+  border:1px solid var(--border); border-radius:10px;
   background:#fff;
-  transition:background .2s, box-shadow .2s, border-color .2s;
+  transition:background .2s, box-shadow .2s;
 }
-.sidebar-nav a:hover{ background:#f7f8fa; box-shadow:0 6px 16px rgba(0,0,0,.06); }
-.sidebar-nav a.active{ background:#eef0f3; border-color:#d1d5db; }
+.sidebar-nav a i{
+  font-size:16px; opacity:.85;   /* ikona Lucide */
+}
+.sidebar-nav a:hover{
+  background:#f7f8fa;
+  box-shadow:0 4px 10px rgba(0,0,0,.05);
+}
+.sidebar-nav a.active{
+  background:#eef0f3;
+  border-color:#d1d5db;
+}
+            
+.sidebar-nav a i {
+  font-size: 18px;
+  line-height: 1;
+  margin-right: 6px;
+}
 
 /* spacing w sidebarze */
 [data-testid="stSidebar"] .element-container{ margin-bottom:12px; }
@@ -311,16 +332,13 @@ def zbuduj_pdf(dane_wyniki: pd.DataFrame, kpi: dict, wykres_pizza, wykres_waznos
     return bufor.getvalue()
 
 # ============ SIDEBAR – USTAWIENIA + NAV ============
-st.sidebar.header("⚙️ Ustawienia analizy")
-
-# Nawigacja w stylu z podlinkowaniem do sekcji
 st.sidebar.markdown("""
 <div class="sidebar-nav">
-  <a class="active" href="#home">🏠 Home</a>
-  <a href="#top10">📊 Tabela TOP</a>
-  <a href="#charts">📈 Wykresy</a>
-  <a href="#sim">🧪 Symulacja</a>
-  <a href="#raport">📥 Pobieranie</a>
+  <a class="active" href="#home"><i class="icon-lucide icon-lucide-home"></i> Home</a>
+  <a href="#top10"><i class="icon-lucide icon-lucide-table"></i> Tabela TOP</a>
+  <a href="#charts"><i class="icon-lucide icon-lucide-bar-chart-2"></i> Wykresy</a>
+  <a href="#sim"><i class="icon-lucide icon-lucide-sliders"></i> Symulacja</a>
+  <a href="#raport"><i class="icon-lucide icon-lucide-download"></i> Pobieranie</a>
 </div>
 """, unsafe_allow_html=True)
 
