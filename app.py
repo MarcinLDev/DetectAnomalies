@@ -69,8 +69,8 @@ st.markdown("""
 st.markdown(r"""
 <style>
 :root{
-  --bg:#ffffff;          /* główny obszar = biały */
-  --sidebar-bg:#f5f6f8;  /* sidebar = lekko szary */
+  --bg:#ffffff;          
+  --sidebar-bg:#f5f6f8;  
   --ink:#111111;
   --muted:#667085;
   --border:#E2E4EA;
@@ -219,8 +219,8 @@ def dodaj_etykiety_ryzyka(ramka: pd.DataFrame, progi=(10, 70)) -> pd.DataFrame:
 def przetworz_dane(dane: pd.DataFrame):
     dane_kopia = dane.copy()
     koder_materialu = LabelEncoder()
-    koder_gleby     = LabelEncoder()
-    dane_kopia["Pipe_Material"]    = koder_materialu.fit_transform(dane_kopia["Pipe_Material"])
+    koder_gleby = LabelEncoder()
+    dane_kopia["Pipe_Material"] = koder_materialu.fit_transform(dane_kopia["Pipe_Material"])
     dane_kopia["Soil_Corrosivity"] = koder_gleby.fit_transform(dane_kopia["Soil_Corrosivity"])
     cechy_X = dane_kopia.drop(columns=["Pipe_ID", "Leak_Class"])
     etykiety_y = dane_kopia["Leak_Class"].astype(int)
@@ -357,10 +357,10 @@ with col_sb1:
     if st.button("↺ Przelicz", key="btn_recalc"):
         st.rerun()
 with col_sb2:
-    if st.button("🧹 Reset"):
+    if st.button("Reset"):
         st.session_state.clear(); st.rerun()
 
-# Nadpisz etykietę przycisku na HTML
+# etykie przycisku nad HTML
 st.markdown(
     """
     <style>
@@ -378,7 +378,7 @@ st.markdown(
 st.sidebar.markdown("---")
 
 # ============ DANE → MODEL → SKORING ============
-# Ścieżka jak u Ciebie (zostawiamy); jeśli chcesz fallback do /mnt/data, dopisz własny warunek.
+
 sciezka_danych = "data/raw/water_network_leak_dataset.xlsx"
 if not os.path.exists(sciezka_danych):
     st.error(f"Nie znaleziono pliku: {sciezka_danych}")
@@ -441,7 +441,7 @@ with kol_top2:
 with kol_top3:
     rosnaco = st.toggle("Rosnąco", value=False)
 
-# Źródło do tabeli (z opcjonalnym filtrem)
+# Źródło do tabeli 
 zrodlo_tabeli = dane_wyniki[dane_wyniki["Ocena_modelu"]=="🔴 Wysokie ryzyko"] if pokaz_tylko_wysokie else dane_wyniki
 widok_top = zrodlo_tabeli.sort_values(kolumna_sort, ascending=rosnaco).head(ile_pokazac)
 
@@ -485,10 +485,10 @@ wykres_pizza.update_layout(template="plotly_white", paper_bgcolor="white", plot_
 
 col_tab, col_pie = st.columns([2,1])
 with col_tab:
-    # st.markdown("<div class='panel-title'>📋 Tabela TOP</div>", unsafe_allow_html=True)
+    # st.markdown("<div class='panel-title'> Tabela TOP</div>", unsafe_allow_html=True)
     st.plotly_chart(fig_tabela, use_container_width=True, theme=None)
 with col_pie:
-    # st.markdown("<div class='panel-title'>🍩 Struktura ryzyka</div>", unsafe_allow_html=True)
+    # st.markdown("<div class='panel-title'> Struktura ryzyka</div>", unsafe_allow_html=True)
     st.plotly_chart(wykres_pizza, use_container_width=True, theme=None)
 
 # ============ POLSKIE NAZWY CECH ============
@@ -504,7 +504,7 @@ slownik_nazw_cech = {
 
 # ============ WYKRES WAŻNOŚCI CECH + SYMULACJA ============
 st.markdown('<a id="charts"></a>', unsafe_allow_html=True)
-st.subheader("📈 Czynniki ryzyka")
+st.subheader("Czynniki ryzyka")
 
 waznosc_df = pd.DataFrame({"Cechy": list(cechy_X.columns), "Waznosc": model_rf.feature_importances_})
 waznosc_df["Cechy_PL"] = waznosc_df["Cechy"].map(slownik_nazw_cech).fillna(waznosc_df["Cechy"])
@@ -572,7 +572,7 @@ with col_sim:
 
     prog_sredni = 10
     prog_wysoki = 80
-    ryzyko_sim = 23.7  # np. wynik modelu
+    ryzyko_sim = 23.7  
 
     wykres_gauge = go.Figure(go.Indicator(
         mode="gauge+number",
@@ -584,12 +584,12 @@ with col_sim:
         gauge={
             'shape': "angular",
             'axis': {'range': [0, 100], 'tickwidth': 1, 'tickcolor': "#999"},
-            'bar': {'color': "#0B7CFF", 'thickness': 0.12},   # cieńszy pasek
+            'bar': {'color': "#0B7CFF", 'thickness': 0.12},   
             'bgcolor': "white",
             'steps': [
-                {'range': [0, prog_sredni], 'color': 'rgba(34,197,94,0.20)'},   # zielony pastel
-                {'range': [prog_sredni, prog_wysoki], 'color': 'rgba(250,204,21,0.25)'}, # żółty pastel
-                {'range': [prog_wysoki, 100], 'color': 'rgba(239,68,68,0.25)'}  # czerwony pastel
+                {'range': [0, prog_sredni], 'color': 'rgba(34,197,94,0.20)'},   
+                {'range': [prog_sredni, prog_wysoki], 'color': 'rgba(250,204,21,0.25)'}, 
+                {'range': [prog_wysoki, 100], 'color': 'rgba(239,68,68,0.25)'}  
             ],
             'threshold': {
                 'line': {'color': "#EF4444", 'width': 3},
@@ -608,7 +608,7 @@ with col_sim:
         paper_bgcolor="white",
         plot_bgcolor="white",
         margin=dict(l=20, r=20, t=80, b=20),
-        height=230   # <-- niższy, wygląda jak widget
+        height=230   
     )
     st.plotly_chart(wykres_gauge, use_container_width=True, theme=None)
 
@@ -621,7 +621,6 @@ st.markdown('<a id="raport"></a>', unsafe_allow_html=True)
 
 bajty_csv = dane_wyniki.to_csv(index=False).encode("utf-8")
 
-# spróbuj zbudować PDF (wymaga kaleido do zapisu wykresów)
 try:
     bajty_pdf = zbuduj_pdf(dane_wyniki, kpi, wykres_pizza, wykres_waznosc)
 except Exception as e:
@@ -636,7 +635,7 @@ if bajty_pdf is not None:
     st.sidebar.download_button("📄 Pobierz raport PDF", data=bajty_pdf, file_name="raport_AI_siec_wod_kan.pdf",
                                mime="application/pdf", use_container_width=True)
 else:
-    # awaryjnie udostępnij CSV pod nazwą PDF, żeby był przycisk (jak wcześniej)
+
     st.sidebar.download_button("📄 Pobierz raport (tymczasowo CSV)", data=bajty_csv,
                                file_name="raport_AI_siec_wod_kan.csv", mime="text/csv",
                                use_container_width=True)
