@@ -1,0 +1,121 @@
+/* === ELEMENTY INTERFEJSU (DASH) === */
+
+/* === KPI BOX === */
+.metric-box {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+    color: #1E293B;
+    border-left: 4px solid #2563EB;
+    transition: transform 0.15s ease;
+}
+.metric-box:hover {
+    transform: translateY(-3px);
+}
+
+/* === ALERTY / STATUSY === */
+.alert-success {
+    background-color: #DCFCE7;
+    color: #166534;
+    border-left: 4px solid #16A34A;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.alert-warning {
+    background-color: #FEF9C3;
+    color: #CA8A04;
+    border-left: 4px solid #EAB308;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.alert-error {
+    background-color: #FEE2E2;
+    color: #B91C1C;
+    border-left: 4px solid #DC2626;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* === BUTTONS === */
+button, .dash-button {
+    background-color: #2563EB;
+    color: #FFFFFF;
+    border-radius: 8px;
+    border: none;
+    padding: 0.6rem 1rem;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+button:hover, .dash-button:hover {
+    background-color: #1E3A8A;
+    transform: translateY(-1px);
+}
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* === DASH DATA TABLE === */
+.dash-table-container .dash-table {
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    font-family: "Inter", sans-serif;
+}
+.dash-table-container th {
+    background-color: #F1F5F9 !important;
+    color: #1E293B !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem;
+    border: 1px solid #E5E7EB;
+    text-align: center;
+}
+.dash-table-container td {
+    border: 1px solid #E5E7EB;
+    padding: 8px;
+    text-align: center;
+    color: #1E293B;
+    font-size: 0.9rem;
+}
+
+/* === UPLOAD (dcc.Upload) === */
+.dash-uploader {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    border: 2px dashed #CBD5E1;
+    border-radius: 10px;
+    background-color: #FAFAFA;
+    text-align: center;
+    color: #1E293B;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+.dash-uploader:hover {
+    background-color: #F5F7FB;
+}
+
+/* === METRYKI (np. oszczędności) === */
+.metric-highlight {
+    background-color: #DCFCE7;
+    color: #166534;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* === OGÓLNE === */
+hr {
+    border: none;
+    border-top: 1px solid #E5E7EB;
+    margin: 1.5rem 0;
+}

@@ -1,6 +1,6 @@
 # app.py
 # ————————————————————————————————————————————————————————————————————
-# Dashboard AI dla gminy – Predykcja awarii sieci wodno-kanalizacyjnej
+# Dashboard AI dla gminy – Predykcja awarii sieci wodnej
 # ————————————————————————————————————————————————————————————————————
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
@@ -9,6 +9,12 @@ from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, Image
 from reportlab.lib.units import cm
+
+import leafmap.foliumap as leafmap
+import geopandas as gpd
+from shapely.geometry import LineString, Point
+from mapa_geoportal import generuj_mape, pokaz_mape_streamlit
+
 
 import os, time, base64
 from io import BytesIO
@@ -29,7 +35,7 @@ from sklearn.metrics import (
 
 # ============ USTAWIENIA STRONY ============
 st.set_page_config(
-    page_title="AI – Predykcja awarii sieci wodno-kanalizacyjnej",
+    page_title="AI – Predykcja awarii sieci wodnej",
     page_icon="💧",
     layout="wide",
 )
@@ -56,7 +62,7 @@ def wstaw_logo_fixed(logo_path=SCIEZKA_LOGO, link="#", wysokosc=48):
 wstaw_logo_fixed()
 
 st.markdown("""
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.344.0/font/lucide.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 """, unsafe_allow_html=True)
 
 # ============ GLOBALNY STYL – „Anthropic-light inspired” ============
@@ -279,7 +285,7 @@ def zbuduj_pdf(dane_wyniki: pd.DataFrame, kpi: dict, wykres_pizza, wykres_waznos
     doc = SimpleDocTemplate(bufor, pagesize=A4, leftMargin=24, rightMargin=24, topMargin=26, bottomMargin=24)
     el = []
 
-    el.append(Paragraph("AI – Predykcja awarii sieci wodno-kanalizacyjnej", styles["Title"]))
+    el.append(Paragraph("AI – Predykcja awarii sieci wodnej", styles["Title"]))
     el.append(Spacer(1, 8))
 
     kpi_tab = Table([
@@ -334,25 +340,40 @@ def zbuduj_pdf(dane_wyniki: pd.DataFrame, kpi: dict, wykres_pizza, wykres_waznos
 # ============ SIDEBAR – USTAWIENIA + NAV ============
 st.sidebar.markdown("""
 <div class="sidebar-nav">
-  <a class="active" href="#home"><i class="icon-lucide icon-lucide-home"></i> Home</a>
-  <a href="#top10"><i class="icon-lucide icon-lucide-table"></i> Tabela TOP</a>
-  <a href="#charts"><i class="icon-lucide icon-lucide-bar-chart-2"></i> Wykresy</a>
-  <a href="#sim"><i class="icon-lucide icon-lucide-sliders"></i> Symulacja</a>
-  <a href="#raport"><i class="icon-lucide icon-lucide-download"></i> Pobieranie</a>
+  <a class="active" href="#home"><i class="fa fa-home"></i> Home</a>
+  <a href="#top10"><i class="fa fa-table"></i> Tabela TOP</a>
+  <a href="#charts"><i class="fa fa-chart-bar"></i> Wykresy</a>
+  <a href="#sim"><i class="fa fa-sliders-h"></i> Symulacja</a>
+  <a href="#raport"><i class="fa fa-download"></i> Pobieranie</a>
 </div>
 """, unsafe_allow_html=True)
 
 prog_sredni  = st.sidebar.slider("Próg średniego ryzyka (%)", 5, 60, 1, step=5)
 prog_wysoki  = st.sidebar.slider("Próg wysokiego ryzyka (%)", 70, 95, 99, step=5)
-pokaz_tylko_wysokie = st.sidebar.toggle("🔎 Pokaż tylko wysokie ryzyko w tabeli", value=False)
+pokaz_tylko_wysokie = st.sidebar.toggle("🔎︎ Pokaż tylko wysokie ryzyko w tabeli", value=False)
 
 col_sb1, col_sb2 = st.sidebar.columns(2)
 with col_sb1:
-    if st.button("🔄 Przelicz"):
+    if st.button("↺ Przelicz", key="btn_recalc"):
         st.rerun()
 with col_sb2:
     if st.button("🧹 Reset"):
         st.session_state.clear(); st.rerun()
+
+# Nadpisz etykietę przycisku na HTML
+st.markdown(
+    """
+    <style>
+    div[data-testid="stButton"][key="btn_recalc"] button:before {
+        font-family: "Font Awesome 6 Free";
+        content: "\\f01e";  /* ikona rotate-right */
+        font-weight: 900;
+        margin-right: 8px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 st.sidebar.markdown("---")
 
@@ -381,22 +402,36 @@ kpi = {"wysokie": liczba_wysokie, "srednie": liczba_srednie, "niskie": liczba_ni
 
 # ============ NAGŁÓWEK + KPI ============
 st.markdown('<a id="home"></a>', unsafe_allow_html=True)
-st.title("AI – Predykcja awarii sieci wodno-kanalizacyjnej")
+st.title("AI – Predykcja awarii sieci wodnej")
 
 kol1, kol2, kol3 = st.columns([1,1,1])
 klasa_czer = "karta-kpi kpi-czerw puls" if liczba_wysokie > 0 else "karta-kpi kpi-czerw"
-with kol1: st.markdown(f'<div class="{klasa_czer}">🔴 Wysokie ryzyko<br><span style="font-size:34px">{liczba_wysokie}</span></div>', unsafe_allow_html=True)
-with kol2: st.markdown(f'<div class="karta-kpi kpi-zolty">🟡 Średnie ryzyko<br><span style="font-size:34px">{liczba_srednie}</span></div>', unsafe_allow_html=True)
-with kol3: st.markdown(f'<div class="karta-kpi kpi-ziel">🟢 Niskie ryzyko<br><span style="font-size:34px">{liczba_niskie}</span></div>', unsafe_allow_html=True)
+with kol1: st.markdown(f'<div class="{klasa_czer}"><i class="fa fa-triangle-exclamation"></i> Wysokie ryzyko<br><span style="font-size:34px">{liczba_wysokie}</span></div>', unsafe_allow_html=True)
+with kol2: st.markdown(f'<div class="karta-kpi kpi-zolty"><i class="fa fa-circle-exclamation"></i> Średnie ryzyko<br><span style="font-size:34px">{liczba_srednie}</span></div>', unsafe_allow_html=True)
+with kol3: st.markdown(f'<div class="karta-kpi kpi-ziel"><i class="fa fa-circle-check"></i> Niskie ryzyko<br><span style="font-size:34px">{liczba_niskie}</span></div>', unsafe_allow_html=True)
+
 st.markdown(f"<div class='podpis'>Łącznie elementów: <b>{liczba_razem}</b>. Progi: średnie ≥ {prog_sredni}%, wysokie ≥ {prog_wysoki}%.</div>", unsafe_allow_html=True)
 
-# MAPA/OBRAZ – też w ramce
-st.markdown("<div class='panel-title'>Mapa sieci</div>", unsafe_allow_html=True)
+
+
+# --- mapa bazowa ---
+
+st.markdown("<div class='panel-title'><i class='fa fa-map'></i> Mapa sieci</div>", unsafe_allow_html=True) 
 st.image("assets/3!.png", use_container_width=True)
+
+# # --- Mapa Geoportalu ---
+
+# st.markdown("<div class='panel-title'><i class='fa fa-map'></i> Mapa sieci (interaktywna)</div>", unsafe_allow_html=True)
+
+# m = generuj_mape()
+# pokaz_mape_streamlit(m, wysokosc=700)
+
+
+
 
 # ============ TOP – elementy o najwyższym ryzyku ============
 st.markdown('<a id="top10"></a>', unsafe_allow_html=True)
-st.markdown("<div class='panel-title'>Elementy o najwyższym ryzyku</div>", unsafe_allow_html=True)
+st.markdown("<div class='panel-title'><i class='fa fa-list-ol'></i> Elementy o najwyższym ryzyku</div>", unsafe_allow_html=True)
 
 kol_top1, kol_top2, kol_top3 = st.columns([1,1,1])
 with kol_top1:
@@ -502,12 +537,14 @@ wykres_waznosc.update_layout(
 
 col_waz, col_sim = st.columns([2,1])
 with col_waz:
-    st.markdown("<div class='panel-title'>🧩 Ważność cech</div>", unsafe_allow_html=True)
+    st.markdown("<div class='panel-title'><i class='fa fa-chart-line'></i> Ważność cech</div>", unsafe_allow_html=True)
     st.plotly_chart(wykres_waznosc, use_container_width=True, theme=None)
 
 with col_sim:
     st.markdown('<a id="sim"></a>', unsafe_allow_html=True)
-    st.markdown("<div class='panel-title'>🧪 Symulacja „co-jeśli”</div>", unsafe_allow_html=True)
+    st.markdown("<div class='panel-title'><i class='fa fa-flask'></i> Symulacja „co-jeśli”</div>", unsafe_allow_html=True)
+    
+
 
 
 
@@ -592,7 +629,7 @@ except Exception as e:
     st.info("PDF wymaga pakietu 'kaleido' i czcionek DejaVu (opcjonalnie). Jeśli nie masz, zainstaluj: `pip install -U kaleido`.")
 
 st.sidebar.subheader("Pobierz wyniki")
-st.sidebar.download_button("📊 Pobierz CSV", data=bajty_csv, file_name="wyniki_ryzyka_sieci.csv",
+st.sidebar.download_button("⬇ Pobierz CSV", data=bajty_csv, file_name="wyniki_ryzyka_sieci.csv",
                            mime="text/csv", use_container_width=True)
 
 if bajty_pdf is not None:

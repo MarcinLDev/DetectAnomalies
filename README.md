@@ -1,40 +1,111 @@
 # AI – Predykcja awarii sieci wodno-kanalizacyjnej
 
-Projekt prezentuje interaktywny dashboard Streamlit do oceny ryzyka awarii w sieciach wodno‑kanalizacyjnych z wykorzystaniem modeli uczenia maszynowego (Random Forest). Aplikacja umożliwia analizę danych, predykcję ryzyka, symulacje „co‑jeśli” oraz eksport raportu PDF.
+Projekt prezentuje **aplikację demonstracyjną AI** służącą do oceny ryzyka awarii
+w sieciach wodno-kanalizacyjnych z wykorzystaniem modeli uczenia maszynowego.
 
-## Kluczowe funkcje
+Aplikacja została zbudowana w formie **interaktywnego dashboardu Streamlit**
+i umożliwia analizę danych, predykcję ryzyka, symulacje typu *„co-jeśli”*
+oraz generowanie raportów.
 
-- Klasyfikacja ryzyka awarii: niskie / średnie / wysokie
-- Sandbox „co‑jeśli” (interaktywna symulacja)
-- Wizualizacje wpływu cech na wynik modelu
-- Eksport do PDF i CSV
-- Live demo (opcjonalnie)
+Projekt ma charakter **case study / proof-of-concept** i skupia się na
+praktycznym wykorzystaniu modelu ML w aplikacji dla użytkownika biznesowego.
 
-### Ustawienia + Podsumowanie ryzyka
+---
+
+## Problem
+
+Sieci wodno-kanalizacyjne są narażone na awarie wynikające z wielu czynników,
+takich jak wiek infrastruktury, warunki środowiskowe czy intensywność eksploatacji.
+
+Celem projektu jest:
+- wczesna identyfikacja elementów infrastruktury o podwyższonym ryzyku awarii
+- wsparcie decyzji operacyjnych i planowania działań prewencyjnych
+- umożliwienie użytkownikowi eksploracji scenariuszy „co-jeśli”
+
+---
+
+## Opis rozwiązania
+
+Projekt wykorzystuje **model Random Forest** do klasyfikacji ryzyka awarii
+na trzy poziomy:
+- niskie
+- średnie
+- wysokie
+
+Model został osadzony w aplikacji webowej, która:
+- umożliwia interaktywną analizę danych wejściowych
+- prezentuje wpływ cech na wynik predykcji
+- pozwala symulować zmiany parametrów i obserwować wpływ na ryzyko
+- generuje raporty w formacie PDF i CSV
+
+---
+
+## Kluczowe funkcje aplikacji
+
+- Klasyfikacja ryzyka awarii (low / medium / high)
+- Interaktywny tryb „co-jeśli” (sandbox symulacyjny)
+- Wizualizacja wpływu cech na wynik modelu
+- Tabela TOP elementów o najwyższym ryzyku
+- Eksport wyników do PDF i CSV
+- Czytelny dashboard dla użytkownika nietechnicznego
+
+---
+
+## Przykładowe widoki aplikacji
+
+### Podsumowanie ryzyka
 ![Podsumowanie ryzyka](assets/screens/dashboard_1.png)
 
 ### Czynniki wpływające na ryzyko
-![Dashboard – wykres ważności cech](assets/screens/dashboard_2.png)
+![Ważność cech](assets/screens/dashboard_2.png)
 
-### Tryb „co‑jeśli” + Miernik ryzyka
-![Dashboard – tryb symulacji](assets/screens/dashboard_3.png)
+### Tryb „co-jeśli” i miernik ryzyka
+![Tryb symulacji](assets/screens/dashboard_3.png)
 
 ### Tabela TOP elementów
-![Dashboard – TOP tabela](assets/screens/dashboard_4.png)
+![Tabela TOP](assets/screens/dashboard_4.png)
+
+---
 
 ## Technologie
 
 - Python 3.10+
 - Streamlit
 - Scikit-learn (Random Forest)
-- Plotly
 - Pandas
-- ReportLab (PDF)
+- Plotly
+- ReportLab (generowanie PDF)
 - Kaleido (eksport wykresów do PNG)
 
-## Uruchomienie
+---
+
+## Uruchomienie projektu
 
 1. Zainstaluj zależności:
 
 ```bash
 pip install -r requirements.txt
+
+streamlit run app.py
+```
+
+## Zakres projektu
+
+Projekt celowo koncentruje się na warstwie aplikacyjnej i modelowej.
+
+W zakresie projektu:
+
+- trening i inferencja modelu ML
+- logika biznesowa predykcji ryzyka
+- interfejs użytkownika i wizualizacja wyników
+- raportowanie
+- Poza zakresem projektu:
+- produkcyjne pipeline’y danych (ETL / Airflow)
+- wdrożenie chmurowe
+- monitoring i MLOps
+
+## Uwagi końcowe
+
+* Projekt ma charakter demonstracyjny i edukacyjny
+* Dane wykorzystywane w projekcie nie zawierają informacji wrażliwych
+* Repozytorium stanowi przykład praktycznego użycia modelu ML w aplikacji

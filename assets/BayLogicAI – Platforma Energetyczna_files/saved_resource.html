@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<!-- saved from url=(0012)about:srcdoc -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css">
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+            <style>
+                #map_b692fa9ecec70643b805731c479f53df {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css">
+</head>
+<body>
+    
+    
+            <div class="folium-map leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" id="map_b692fa9ecec70643b805731c479f53df" tabindex="0"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 20; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" src="https://c.basemaps.cartocdn.com/light_all/12/2256/1310@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(478px, 34px, 0px); opacity: 1;"><img alt="" src="https://d.basemaps.cartocdn.com/light_all/12/2257/1310@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(734px, 34px, 0px); opacity: 1;"><img alt="" src="https://d.basemaps.cartocdn.com/light_all/12/2256/1311@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(478px, 290px, 0px); opacity: 1;"><img alt="" src="https://a.basemaps.cartocdn.com/light_all/12/2257/1311@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(734px, 290px, 0px); opacity: 1;"><img alt="" src="https://b.basemaps.cartocdn.com/light_all/12/2256/1309@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(478px, -222px, 0px); opacity: 1;"><img alt="" src="https://c.basemaps.cartocdn.com/light_all/12/2257/1309@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(734px, -222px, 0px); opacity: 1;"><img alt="" src="https://b.basemaps.cartocdn.com/light_all/12/2255/1310@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(222px, 34px, 0px); opacity: 1;"><img alt="" src="https://a.basemaps.cartocdn.com/light_all/12/2258/1310@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(990px, 34px, 0px); opacity: 1;"><img alt="" src="https://c.basemaps.cartocdn.com/light_all/12/2255/1311@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(222px, 290px, 0px); opacity: 1;"><img alt="" src="https://b.basemaps.cartocdn.com/light_all/12/2258/1311@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(990px, 290px, 0px); opacity: 1;"><img alt="" src="https://a.basemaps.cartocdn.com/light_all/12/2256/1312@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(478px, 546px, 0px); opacity: 1;"><img alt="" src="https://b.basemaps.cartocdn.com/light_all/12/2257/1312@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(734px, 546px, 0px); opacity: 1;"><img alt="" src="https://a.basemaps.cartocdn.com/light_all/12/2255/1309@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(222px, -222px, 0px); opacity: 1;"><img alt="" src="https://d.basemaps.cartocdn.com/light_all/12/2258/1309@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(990px, -222px, 0px); opacity: 1;"><img alt="" src="https://d.basemaps.cartocdn.com/light_all/12/2255/1312@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(222px, 546px, 0px); opacity: 1;"><img alt="" src="https://c.basemaps.cartocdn.com/light_all/12/2258/1312@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(990px, 546px, 0px); opacity: 1;"><img alt="" src="https://a.basemaps.cartocdn.com/light_all/12/2254/1310@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-34px, 34px, 0px); opacity: 1;"><img alt="" src="https://b.basemaps.cartocdn.com/light_all/12/2259/1310@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1246px, 34px, 0px); opacity: 1;"><img alt="" src="https://b.basemaps.cartocdn.com/light_all/12/2254/1311@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-34px, 290px, 0px); opacity: 1;"><img alt="" src="https://c.basemaps.cartocdn.com/light_all/12/2259/1311@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1246px, 290px, 0px); opacity: 1;"><img alt="" src="https://d.basemaps.cartocdn.com/light_all/12/2254/1309@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-34px, -222px, 0px); opacity: 1;"><img alt="" src="https://a.basemaps.cartocdn.com/light_all/12/2259/1309@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1246px, -222px, 0px); opacity: 1;"><img alt="" src="https://c.basemaps.cartocdn.com/light_all/12/2254/1312@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-34px, 546px, 0px); opacity: 1;"><img alt="" src="https://d.basemaps.cartocdn.com/light_all/12/2259/1312@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1246px, 546px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-overlay-pane"><svg pointer-events="none" class="leaflet-zoom-animated" width="1534" height="720" viewBox="-128 -60 1534 720" style="transform: translate3d(-128px, -60px, 0px);"><g><path class="leaflet-interactive" stroke="#10b981" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="#10b981" fill-opacity="0.85" fill-rule="evenodd" d="M461,337a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0 "></path><path class="leaflet-interactive" stroke="#10b981" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="#10b981" fill-opacity="0.85" fill-rule="evenodd" d="M777,311a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0 "></path><path class="leaflet-interactive" stroke="#10b981" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="#10b981" fill-opacity="0.85" fill-rule="evenodd" d="M685,495a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0 "></path><path class="leaflet-interactive" stroke="#10b981" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="#10b981" fill-opacity="0.85" fill-rule="evenodd" d="M634,633a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0 "></path><path class="leaflet-interactive" stroke="#10b981" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="#10b981" fill-opacity="0.85" fill-rule="evenodd" d="M509,407a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0 "></path></g></svg></div><div class="leaflet-pane leaflet-shadow-pane"></div><div class="leaflet-pane leaflet-marker-pane"><div class="leaflet-marker-icon marker-cluster marker-cluster-medium leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(727px, 125px, 0px); z-index: 125;"><div><span>15</span></div></div><div class="leaflet-marker-icon marker-cluster marker-cluster-small leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(437px, 199px, 0px); z-index: 199;"><div><span>2</span></div></div><div class="leaflet-marker-icon marker-cluster marker-cluster-small leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(747px, 196px, 0px); z-index: 196;"><div><span>3</span></div></div><div class="leaflet-marker-icon marker-cluster marker-cluster-small leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(622px, 252px, 0px); z-index: 252;"><div><span>2</span></div></div><div class="leaflet-marker-icon marker-cluster marker-cluster-medium leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(608px, 391px, 0px); z-index: 391;"><div><span>21</span></div></div><div class="leaflet-marker-icon marker-cluster marker-cluster-small leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(474px, 514px, 0px); z-index: 514;"><div><span>3</span></div></div></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="http://127.0.0.1:8501/#" title="Zoom in" role="button" aria-label="Zoom in" aria-disabled="false"><span aria-hidden="true">+</span></a><a class="leaflet-control-zoom-out" href="http://127.0.0.1:8501/#" title="Zoom out" role="button" aria-label="Zoom out" aria-disabled="false"><span aria-hidden="true">−</span></a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com/" title="A JavaScript library for interactive maps"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" class="leaflet-attribution-flag"><path fill="#4C7BE1" d="M0 0h12v4H0z"></path><path fill="#FFD500" d="M0 4h12v3H0z"></path><path fill="#E0BC00" d="M0 7h12v1H0z"></path></svg> Leaflet</a> <span aria-hidden="true">|</span> © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a></div></div></div></div>
+        
+
+<script>
+    
+    
+            var map_b692fa9ecec70643b805731c479f53df = L.map(
+                "map_b692fa9ecec70643b805731c479f53df",
+                {
+                    center: [54.21177777254903, 18.33648179411765],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d972a82ba42a32ca59e94f0fddd54dae = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d972a82ba42a32ca59e94f0fddd54dae.addTo(map_b692fa9ecec70643b805731c479f53df);
+        
+    
+            var marker_cluster_b749d0f0be73db39446073be5aab5418 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_7426908e555991d701dc5c20913731c0 = L.circleMarker(
+                [54.1449551, 18.3380796],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_8c2afc14ef30d30d87cb26b05cd4de3f = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_3cbf2a16e83830c5b00561087fbbe4ba = $(`<div id="html_3cbf2a16e83830c5b00561087fbbe4ba" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Sucha Huta</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 BIESZCZADZKA, 83-041 SUCHA HUTA, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 33,907 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 29,599.97 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 0.87 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_8c2afc14ef30d30d87cb26b05cd4de3f.setContent(html_3cbf2a16e83830c5b00561087fbbe4ba);
+            
+        
+
+        circle_marker_7426908e555991d701dc5c20913731c0.bindPopup(popup_8c2afc14ef30d30d87cb26b05cd4de3f)
+        ;
+
+        
+    
+    
+            var circle_marker_a978165305f7415dedd642cc8554043f = L.circleMarker(
+                [54.1659143, 18.2875455],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_a0fb987be2892defca0c9340004d321c = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_06aa2c1073e3027631555bb4c7b51ab5 = $(`<div id="html_06aa2c1073e3027631555bb4c7b51ab5" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Przepompownia PS2</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 ŁĄKOWA, 83-047 BOROWINA, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 1,326 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 2,828.45 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 2.13 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_a0fb987be2892defca0c9340004d321c.setContent(html_06aa2c1073e3027631555bb4c7b51ab5);
+            
+        
+
+        circle_marker_a978165305f7415dedd642cc8554043f.bindPopup(popup_a0fb987be2892defca0c9340004d321c)
+        ;
+
+        
+    
+    
+            var circle_marker_ed90db350eef3700d38818356334b3f5 = L.circleMarker(
+                [54.1696623, 18.2774787],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_da6cecd6b5b7edf444fae8eb4462b3d1 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_a5243948ae96b95feb57bffc377b8505 = $(`<div id="html_a5243948ae96b95feb57bffc377b8505" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Przepompownia ścieków PS-3</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 TRZEPOWO, 83-047 TRZEPOWO, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 1,043 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 2,564.08 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 2.46 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_da6cecd6b5b7edf444fae8eb4462b3d1.setContent(html_a5243948ae96b95feb57bffc377b8505);
+            
+        
+
+        circle_marker_ed90db350eef3700d38818356334b3f5.bindPopup(popup_da6cecd6b5b7edf444fae8eb4462b3d1)
+        ;
+
+        
+    
+    
+            var circle_marker_f35bd940543b8eb6f4757fe35d69b3e0 = L.circleMarker(
+                [54.1709607, 18.2748526],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_dd97e00f4f509e07c664120016bc1482 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_43bae3a6ae45b93caa0b80ad23308fa3 = $(`<div id="html_43bae3a6ae45b93caa0b80ad23308fa3" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Hydrofornia</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 MESTWINA, 83-047 TRZEPOWO, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 11,884 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 11,081.22 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 0.93 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_dd97e00f4f509e07c664120016bc1482.setContent(html_43bae3a6ae45b93caa0b80ad23308fa3);
+            
+        
+
+        circle_marker_f35bd940543b8eb6f4757fe35d69b3e0.bindPopup(popup_dd97e00f4f509e07c664120016bc1482)
+        ;
+
+        
+    
+    
+            var circle_marker_6c2055c20a2f28e4bab017fe6bf68618 = L.circleMarker(
+                [54.1727423, 18.3557582],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_112cf37505a9ca6f95be762d80cf28c5 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_5731b2b16d4fe39a3eb4cfacfc531ce5 = $(`<div id="html_5731b2b16d4fe39a3eb4cfacfc531ce5" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Stacja podnoszenia ciśnienia wody</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 MORSKA, 83-047 KIERZKOWO, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 4,832 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 5,770.63 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 1.19 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_112cf37505a9ca6f95be762d80cf28c5.setContent(html_5731b2b16d4fe39a3eb4cfacfc531ce5);
+            
+        
+
+        circle_marker_6c2055c20a2f28e4bab017fe6bf68618.bindPopup(popup_112cf37505a9ca6f95be762d80cf28c5)
+        ;
+
+        
+    
+    
+            var circle_marker_d80444789f9d36c673a82538d5e2cf1b = L.circleMarker(
+                [54.184277700072, 18.3304486],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_5c03f5629d41845d27b61c8ddd675cd3 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_4ec3d28f91724612ecbce47aee2e14da = $(`<div id="html_4ec3d28f91724612ecbce47aee2e14da" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Przepompownia Niedźwiedzia dz.13</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 NIEDŹWIEDZIA, 83-047 GROMADZIN, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 1,573 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 4,992.58 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 3.17 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_5c03f5629d41845d27b61c8ddd675cd3.setContent(html_4ec3d28f91724612ecbce47aee2e14da);
+            
+        
+
+        circle_marker_d80444789f9d36c673a82538d5e2cf1b.bindPopup(popup_5c03f5629d41845d27b61c8ddd675cd3)
+        ;
+
+        
+    
+    
+            var circle_marker_a592037eeb32f54de3b68bef3a9bd5f2 = L.circleMarker(
+                [54.184169699964, 18.330510953891427],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_04b1e1c4c3bc618f9da9f4d41e4015b0 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_1c580b91f2d0c064b99070d89e9d4d93 = $(`<div id="html_1c580b91f2d0c064b99070d89e9d4d93" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Przepompownia Niedźwiedzia dz.13</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 NIEDŹWIEDZIA, 83-047 GROMADZIN, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 1,399 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 2,564.23 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 1.83 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_04b1e1c4c3bc618f9da9f4d41e4015b0.setContent(html_1c580b91f2d0c064b99070d89e9d4d93);
+            
+        
+
+        circle_marker_a592037eeb32f54de3b68bef3a9bd5f2.bindPopup(popup_04b1e1c4c3bc618f9da9f4d41e4015b0)
+        ;
+
+        
+    
+    
+            var circle_marker_31b55805e109d07ca1d46c448ea4f5e4 = L.circleMarker(
+                [54.184169699964, 18.330386246108574],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_b135f8cbb3fe9a80a2885016459a4445 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_46c729b917b47b1d1fbe5e46b85b4cdc = $(`<div id="html_46c729b917b47b1d1fbe5e46b85b4cdc" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Przepompownia Niedźwiedzia dz. 13</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 NIEDŹWIEDZIA, 83-047 GROMADZIN, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 1,236 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 2,592.28 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 2.10 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_b135f8cbb3fe9a80a2885016459a4445.setContent(html_46c729b917b47b1d1fbe5e46b85b4cdc);
+            
+        
+
+        circle_marker_31b55805e109d07ca1d46c448ea4f5e4.bindPopup(popup_b135f8cbb3fe9a80a2885016459a4445)
+        ;
+
+        
+    
+    
+            var circle_marker_45fd392522223c13971377c26e84c875 = L.circleMarker(
+                [54.1875535, 18.3131011],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_d1cddfe101f6a14904fba9722ec70467 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_73c1dac02d5aa81c0956bfdf64a4fcc7 = $(`<div id="html_73c1dac02d5aa81c0956bfdf64a4fcc7" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">PS2 -PRZEPOMPOWNIA PIEKŁO DOLNE</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 ROZJAZD, 83-047 PIEKŁO DOLNE, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 1,080 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 2,078.47 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 1.92 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_d1cddfe101f6a14904fba9722ec70467.setContent(html_73c1dac02d5aa81c0956bfdf64a4fcc7);
+            
+        
+
+        circle_marker_45fd392522223c13971377c26e84c875.bindPopup(popup_d1cddfe101f6a14904fba9722ec70467)
+        ;
+
+        
+    
+    
+            var circle_marker_5be928b2c9ac12eab0eeb9e000342c16 = L.circleMarker(
+                [54.1896748, 18.3373528],
+                {"bubblingMouseEvents": true, "color": "#ef4444", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ef4444", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_5194e15c69c942eabef0cffb35493325 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_41bf7d4a1696b11215800c96db57bebd = $(`<div id="html_41bf7d4a1696b11215800c96db57bebd" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Przepompownia Wiewiórcza dz. 60</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 WIEWIÓRCZA, 83-047 GROMADZIN, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 248 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 1,381.05 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 5.57 zł/kWh</div>             <div style='margin-top:6px; color:#ef4444;'><i class='ri-error-warning-line' style='margin-right:4px;'></i><b>Wykryto anomalię</b></div>         </div>         </div>`)[0];
+                popup_5194e15c69c942eabef0cffb35493325.setContent(html_41bf7d4a1696b11215800c96db57bebd);
+            
+        
+
+        circle_marker_5be928b2c9ac12eab0eeb9e000342c16.bindPopup(popup_5194e15c69c942eabef0cffb35493325)
+        ;
+
+        
+    
+    
+            var circle_marker_8800f85cfa8f8d9a56b5fe3dcbd04936 = L.circleMarker(
+                [54.1904376, 18.2952497],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_878c89b61ba3953ee7833e04430d8f5a = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_92cbd746b23e3a393deaad2fc77e6af2 = $(`<div id="html_92cbd746b23e3a393deaad2fc77e6af2" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Nowa Oczyzczalnia Ścieków</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 EKOLOGICZNA, 83-047 PIEKŁO DOLNE, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 616,334 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 473,500.64 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 0.77 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_878c89b61ba3953ee7833e04430d8f5a.setContent(html_92cbd746b23e3a393deaad2fc77e6af2);
+            
+        
+
+        circle_marker_8800f85cfa8f8d9a56b5fe3dcbd04936.bindPopup(popup_878c89b61ba3953ee7833e04430d8f5a)
+        ;
+
+        
+    
+    
+            var circle_marker_93bada7ba7ebda904af0cfce870a8ecb = L.circleMarker(
+                [54.1930699, 18.3137613],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_cccf1f03f4107cbe89ac638d4fd2f8d3 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_7f53cb00186f98bb47eea56a82a436ff = $(`<div id="html_7f53cb00186f98bb47eea56a82a436ff" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Nowa Przepompownia PS1</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 JESIONOWA, 83-047 PRZYWIDZ, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 29,083 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 26,154.64 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 0.90 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_cccf1f03f4107cbe89ac638d4fd2f8d3.setContent(html_7f53cb00186f98bb47eea56a82a436ff);
+            
+        
+
+        circle_marker_93bada7ba7ebda904af0cfce870a8ecb.bindPopup(popup_cccf1f03f4107cbe89ac638d4fd2f8d3)
+        ;
+
+        
+    
+    
+            var circle_marker_f1c9c719ac43a4f336c0064e23eff82c = L.circleMarker(
+                [54.1934731, 18.3376215],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_23a0f021ca1894c1441452657cdf0476 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_112c1a0d3ce28661727299211f2ba199 = $(`<div id="html_112c1a0d3ce28661727299211f2ba199" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Przepompownia Przyleśna dz.72/2</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 PRZYLEŚNA, 83-047 GROMADZIN, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 688 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 2,074.97 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 3.02 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_23a0f021ca1894c1441452657cdf0476.setContent(html_112c1a0d3ce28661727299211f2ba199);
+            
+        
+
+        circle_marker_f1c9c719ac43a4f336c0064e23eff82c.bindPopup(popup_23a0f021ca1894c1441452657cdf0476)
+        ;
+
+        
+    
+    
+            var circle_marker_75f2ea72fdb4ed4109f41e2bd3d70edb = L.circleMarker(
+                [54.1947101, 18.3110339],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_f42f303e78b451ac21e97b2a8b259285 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_93c2fce54d0d7b6ccaf1f25c8b4cf952 = $(`<div id="html_93c2fce54d0d7b6ccaf1f25c8b4cf952" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Oświetlenie uliczne</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 NA WZGÓRZU, 83-047 PRZYWIDZ, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 117 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 149.10 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 1.27 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_f42f303e78b451ac21e97b2a8b259285.setContent(html_93c2fce54d0d7b6ccaf1f25c8b4cf952);
+            
+        
+
+        circle_marker_75f2ea72fdb4ed4109f41e2bd3d70edb.bindPopup(popup_f42f303e78b451ac21e97b2a8b259285)
+        ;
+
+        
+    
+    
+            var circle_marker_803c7b2b3c5c40552e2feb5363e3e5ec = L.circleMarker(
+                [54.1948598, 18.3085734],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_483dc7bb2ab0f421cf8be3e478549d2b = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_b1b308653abe1b034510b7d1869a34d6 = $(`<div id="html_b1b308653abe1b034510b7d1869a34d6" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Przepompownia Leśna dz.171</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 LEŚNA, 83-047 PRZYWIDZ, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 924 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 2,291.49 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 2.48 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_483dc7bb2ab0f421cf8be3e478549d2b.setContent(html_b1b308653abe1b034510b7d1869a34d6);
+            
+        
+
+        circle_marker_803c7b2b3c5c40552e2feb5363e3e5ec.bindPopup(popup_483dc7bb2ab0f421cf8be3e478549d2b)
+        ;
+
+        
+    
+    
+            var circle_marker_939bc60c8c41bec1fed8a241c9c2148d = L.circleMarker(
+                [54.195367600072004, 18.3342767],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_036e4285aa12f3be7ffbab570a1c4ff4 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_3ff0f871adda5e3c4e4e9be525d95450 = $(`<div id="html_3ff0f871adda5e3c4e4e9be525d95450" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Szkoła Podstawowa</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 SZKOLNA, 83-047 PRZYWIDZ, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 86,098 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 71,637.05 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 0.83 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_036e4285aa12f3be7ffbab570a1c4ff4.setContent(html_3ff0f871adda5e3c4e4e9be525d95450);
+            
+        
+
+        circle_marker_939bc60c8c41bec1fed8a241c9c2148d.bindPopup(popup_036e4285aa12f3be7ffbab570a1c4ff4)
+        ;
+
+        
+    
+    
+            var circle_marker_1fe37d7ae55c687472a7a76f472a8b3b = L.circleMarker(
+                [54.195259599964004, 18.334339053891426],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_2989e05a155d86c31c049fb2f890a029 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_e04777a11e7bc2eee2f7adc3416dbc5e = $(`<div id="html_e04777a11e7bc2eee2f7adc3416dbc5e" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Arena Przywidzw Przywidzu</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 SZKOLNA, 83-047 PRZYWIDZ, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 77,512 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 89,115.16 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 1.15 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_2989e05a155d86c31c049fb2f890a029.setContent(html_e04777a11e7bc2eee2f7adc3416dbc5e);
+            
+        
+
+        circle_marker_1fe37d7ae55c687472a7a76f472a8b3b.bindPopup(popup_2989e05a155d86c31c049fb2f890a029)
+        ;
+
+        
+    
+    
+            var circle_marker_ca4c7a6085eb8dcbc10198a851242c85 = L.circleMarker(
+                [54.195259599964004, 18.334214346108574],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_fe260478a34177b8264276fc17e23866 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_005065e9d0312d59a90b93f604e0d214 = $(`<div id="html_005065e9d0312d59a90b93f604e0d214" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">PS 1 Szkolna </b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 SZKOLNA, 83-047 PRZYWIDZ, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 31,991 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 32,735.10 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 1.02 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_fe260478a34177b8264276fc17e23866.setContent(html_005065e9d0312d59a90b93f604e0d214);
+            
+        
+
+        circle_marker_ca4c7a6085eb8dcbc10198a851242c85.bindPopup(popup_fe260478a34177b8264276fc17e23866)
+        ;
+
+        
+    
+    
+            var circle_marker_9755554490cd6bcf58a2616c1443987b = L.circleMarker(
+                [54.195480000072, 18.3227377],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_2723a234670089284218d474f9ea1fce = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_2b0999d5534f01976f4c5a8a2180959b = $(`<div id="html_2b0999d5534f01976f4c5a8a2180959b" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Przywidz</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 GDAŃSKA, 83-047 PRZYWIDZ, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 50,894 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 37,755.57 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 0.74 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_2723a234670089284218d474f9ea1fce.setContent(html_2b0999d5534f01976f4c5a8a2180959b);
+            
+        
+
+        circle_marker_9755554490cd6bcf58a2616c1443987b.bindPopup(popup_2723a234670089284218d474f9ea1fce)
+        ;
+
+        
+    
+    
+            var circle_marker_1ec1222603c8a258edc858c79b71e80f = L.circleMarker(
+                [54.195408, 18.322809700072],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_d83808b674097e740608af542b8ed2fd = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_aab153d8a639d4cf3c176a5036d17fd0 = $(`<div id="html_aab153d8a639d4cf3c176a5036d17fd0" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Hydrofornia</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 GDAŃSKA, 83-047 PRZYWIDZ, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 89,578 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 77,156.64 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 0.86 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_d83808b674097e740608af542b8ed2fd.setContent(html_aab153d8a639d4cf3c176a5036d17fd0);
+            
+        
+
+        circle_marker_1ec1222603c8a258edc858c79b71e80f.bindPopup(popup_d83808b674097e740608af542b8ed2fd)
+        ;
+
+        
+    
+    
+            var circle_marker_443df64a870cd4c26c1babd41e19c09e = L.circleMarker(
+                [54.195335999928, 18.3227377],
+                {"bubblingMouseEvents": true, "color": "#ef4444", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ef4444", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_05b0af22422c57c7abca1a204d63ac63 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_0a7356c648fae59187df28bbe864e3f0 = $(`<div id="html_0a7356c648fae59187df28bbe864e3f0" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Obiekt Użyteczności Publicznej</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 GDAŃSKA, 83-047 PRZYWIDZ, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 1,547 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 5,803.79 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 3.75 zł/kWh</div>             <div style='margin-top:6px; color:#ef4444;'><i class='ri-error-warning-line' style='margin-right:4px;'></i><b>Wykryto anomalię</b></div>         </div>         </div>`)[0];
+                popup_05b0af22422c57c7abca1a204d63ac63.setContent(html_0a7356c648fae59187df28bbe864e3f0);
+            
+        
+
+        circle_marker_443df64a870cd4c26c1babd41e19c09e.bindPopup(popup_05b0af22422c57c7abca1a204d63ac63)
+        ;
+
+        
+    
+    
+            var circle_marker_356501a5ce1f2d87c759923c9c35aedb = L.circleMarker(
+                [54.195408, 18.322665699928002],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_416c132588752935608200bf43e7469f = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_5c01bab48f2e69a2f7409ebf0b238249 = $(`<div id="html_5c01bab48f2e69a2f7409ebf0b238249" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Przywidz OSP</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 GDAŃSKA, 83-047 PRZYWIDZ, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 73,850 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 55,452.71 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 0.75 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_416c132588752935608200bf43e7469f.setContent(html_5c01bab48f2e69a2f7409ebf0b238249);
+            
+        
+
+        circle_marker_356501a5ce1f2d87c759923c9c35aedb.bindPopup(popup_416c132588752935608200bf43e7469f)
+        ;
+
+        
+    
+    
+            var circle_marker_94e7d362bb7d0f242c49420a3c0f4d69 = L.circleMarker(
+                [54.1971164, 18.3294971],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_1fe68c275a206f1acbe046196d9e1574 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_10c7525fb712eaef34fdbaf77e5b27f3 = $(`<div id="html_10c7525fb712eaef34fdbaf77e5b27f3" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Przywidz plaża</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 JEZIORNA, 83-047 PRZYWIDZ, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 2,345 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 4,799.69 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 2.05 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_1fe68c275a206f1acbe046196d9e1574.setContent(html_10c7525fb712eaef34fdbaf77e5b27f3);
+            
+        
+
+        circle_marker_94e7d362bb7d0f242c49420a3c0f4d69.bindPopup(popup_1fe68c275a206f1acbe046196d9e1574)
+        ;
+
+        
+    
+    
+            var circle_marker_a03cc7e27d0791cba6eea78aa2f545ec = L.circleMarker(
+                [54.197958600072, 18.3265677],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_f564c27ddde51759105c827b9fb10dd8 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_7ad5452b5be5a00390690394e89068e0 = $(`<div id="html_7ad5452b5be5a00390690394e89068e0" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Hydrofornia</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 GROMADZIN, 83-047 GROMADZIN, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 8,544 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 8,417.77 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 0.99 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_f564c27ddde51759105c827b9fb10dd8.setContent(html_7ad5452b5be5a00390690394e89068e0);
+            
+        
+
+        circle_marker_a03cc7e27d0791cba6eea78aa2f545ec.bindPopup(popup_f564c27ddde51759105c827b9fb10dd8)
+        ;
+
+        
+    
+    
+            var circle_marker_78a2521006df44b28e85d7af38848b33 = L.circleMarker(
+                [54.197850599964, 18.326630053891424],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_3d949508b8fd672f542feee27bff0668 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_2a364253efdba21f9c08ec9634eee799 = $(`<div id="html_2a364253efdba21f9c08ec9634eee799" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Przepompownia Cicha dz. 234/2</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 GROMADZIN, 83-047 GROMADZIN, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 610 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 1,656.00 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 2.71 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_3d949508b8fd672f542feee27bff0668.setContent(html_2a364253efdba21f9c08ec9634eee799);
+            
+        
+
+        circle_marker_78a2521006df44b28e85d7af38848b33.bindPopup(popup_3d949508b8fd672f542feee27bff0668)
+        ;
+
+        
+    
+    
+            var circle_marker_6654f7a4bbe7bfd5dae3579d218600ff = L.circleMarker(
+                [54.197850599964, 18.326505346108572],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_6f379a70fe5ae385ce761fd9a63e6892 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_65ac1879c798333ddfe9fc622bc6fd85 = $(`<div id="html_65ac1879c798333ddfe9fc622bc6fd85" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Przepompownia Gromadzin dz.510/8</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 GROMADZIN, 83-047 GROMADZIN, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 586 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 1,605.49 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 2.74 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_6f379a70fe5ae385ce761fd9a63e6892.setContent(html_65ac1879c798333ddfe9fc622bc6fd85);
+            
+        
+
+        circle_marker_6654f7a4bbe7bfd5dae3579d218600ff.bindPopup(popup_6f379a70fe5ae385ce761fd9a63e6892)
+        ;
+
+        
+    
+    
+            var circle_marker_223a82eba709c607bd56403a66dba4fd = L.circleMarker(
+                [54.1988808, 18.330456],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_f533e62894f2cdac59b8571b2044d665 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_058897b8226ad8d041f58cdaf5332923 = $(`<div id="html_058897b8226ad8d041f58cdaf5332923" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">GOPS Główny punkt Uhlenberga 10</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 UHLENBERGA, 83-047 PRZYWIDZ, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 68,603 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 59,892.60 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 0.87 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_f533e62894f2cdac59b8571b2044d665.setContent(html_058897b8226ad8d041f58cdaf5332923);
+            
+        
+
+        circle_marker_223a82eba709c607bd56403a66dba4fd.bindPopup(popup_f533e62894f2cdac59b8571b2044d665)
+        ;
+
+        
+    
+    
+            var circle_marker_a3f13df9dc949f49bec6f9966f895968 = L.circleMarker(
+                [54.2043423, 18.2788817],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_2c30ba7afcbfe170361dbfc8cbe2dcc3 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_572ea0fb7b30cf6c1f203b4b3d87d701 = $(`<div id="html_572ea0fb7b30cf6c1f203b4b3d87d701" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Hydrofornia</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 SZMARAGDOWA, 83-047 STARA HUTA, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 46,734 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 41,151.97 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 0.88 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_2c30ba7afcbfe170361dbfc8cbe2dcc3.setContent(html_572ea0fb7b30cf6c1f203b4b3d87d701);
+            
+        
+
+        circle_marker_a3f13df9dc949f49bec6f9966f895968.bindPopup(popup_2c30ba7afcbfe170361dbfc8cbe2dcc3)
+        ;
+
+        
+    
+    
+            var circle_marker_74be3d9354fee66fbbf1c2c6d8a07921 = L.circleMarker(
+                [54.2097132, 18.3871695],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_f23c592ad25a8ffede99480c7e12588d = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_00fc7f02d51663778cf66bd53e78c40a = $(`<div id="html_00fc7f02d51663778cf66bd53e78c40a" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Hydrofornia</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 ZIELNA, 83-041 KOZIA GÓRA, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 116,263 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 105,371.47 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 0.91 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_f23c592ad25a8ffede99480c7e12588d.setContent(html_00fc7f02d51663778cf66bd53e78c40a);
+            
+        
+
+        circle_marker_74be3d9354fee66fbbf1c2c6d8a07921.bindPopup(popup_f23c592ad25a8ffede99480c7e12588d)
+        ;
+
+        
+    
+    
+            var circle_marker_d9edf2bc59b17b053c9cddfd63214443 = L.circleMarker(
+                [54.2138889, 18.3330556],
+                {"bubblingMouseEvents": true, "color": "#ef4444", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ef4444", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_7d97e8866aa8fb7f931f896b343c2385 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_0975f108b8ea0da5bdfc0015cf1741a4 = $(`<div id="html_0975f108b8ea0da5bdfc0015cf1741a4" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Boisko Gminne</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 KATARYNKI, 83-047 PRZYWIDZ, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 499 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 2,073.78 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 4.16 zł/kWh</div>             <div style='margin-top:6px; color:#ef4444;'><i class='ri-error-warning-line' style='margin-right:4px;'></i><b>Wykryto anomalię</b></div>         </div>         </div>`)[0];
+                popup_7d97e8866aa8fb7f931f896b343c2385.setContent(html_0975f108b8ea0da5bdfc0015cf1741a4);
+            
+        
+
+        circle_marker_d9edf2bc59b17b053c9cddfd63214443.bindPopup(popup_7d97e8866aa8fb7f931f896b343c2385)
+        ;
+
+        
+    
+    
+            var circle_marker_ce02dcda7515ae0f73bbc515349ac16d = L.circleMarker(
+                [54.2246948, 18.3659536],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_267c87b396f98d2f83b2cc431eea52ac = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_997003315318bf8bb44e05107ca4733a = $(`<div id="html_997003315318bf8bb44e05107ca4733a" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Przepompownia ścieków PS1</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 WIEJSKA, 83-047 POMLEWO, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 5,071 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 6,051.94 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 1.19 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_267c87b396f98d2f83b2cc431eea52ac.setContent(html_997003315318bf8bb44e05107ca4733a);
+            
+        
+
+        circle_marker_ce02dcda7515ae0f73bbc515349ac16d.bindPopup(popup_267c87b396f98d2f83b2cc431eea52ac)
+        ;
+
+        
+    
+    
+            var circle_marker_6f13f0c421b2fab51ce220f014ddb732 = L.circleMarker(
+                [54.2289426, 18.3285522],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_75b8db231271eacb47e461a3a03c94dc = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_50a286180a22322701f785153c944122 = $(`<div id="html_50a286180a22322701f785153c944122" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Oświetlenie uliczne</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 ŻURAWI TRAKT, 83-047 HUTA DOLNA, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 300 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 472.35 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 1.57 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_75b8db231271eacb47e461a3a03c94dc.setContent(html_50a286180a22322701f785153c944122);
+            
+        
+
+        circle_marker_6f13f0c421b2fab51ce220f014ddb732.bindPopup(popup_75b8db231271eacb47e461a3a03c94dc)
+        ;
+
+        
+    
+    
+            var circle_marker_c06af180e106c6b05e672808d4a3de2c = L.circleMarker(
+                [54.2319972, 18.272879],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_973fee368ed95a5d208a2ef2346d602d = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_9a1bc8cf084c5475eaca4a86379c2d2d = $(`<div id="html_9a1bc8cf084c5475eaca4a86379c2d2d" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Ochotnicza Straż Pożarna w Nowej Wsi Przywidzkiej</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 SZKOLNA, 83-047 NOWA WIEŚ PRZYWIDZKA, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 11,156 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 9,804.10 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 0.88 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_973fee368ed95a5d208a2ef2346d602d.setContent(html_9a1bc8cf084c5475eaca4a86379c2d2d);
+            
+        
+
+        circle_marker_c06af180e106c6b05e672808d4a3de2c.bindPopup(popup_973fee368ed95a5d208a2ef2346d602d)
+        ;
+
+        
+    
+    
+            var circle_marker_cb2dec63d38508232af49830454b64a8 = L.circleMarker(
+                [54.2320914, 18.2616069],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_9695ef56a123f0aa3bac858ee54fe496 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_29ffeafa1fd9c5f4f95e13f1c8f4905d = $(`<div id="html_29ffeafa1fd9c5f4f95e13f1c8f4905d" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Hydrofornia</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 TURYSTYCZNA, 83-047 NOWA WIEŚ PRZYWIDZKA, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 28,279 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 25,957.41 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 0.92 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_9695ef56a123f0aa3bac858ee54fe496.setContent(html_29ffeafa1fd9c5f4f95e13f1c8f4905d);
+            
+        
+
+        circle_marker_cb2dec63d38508232af49830454b64a8.bindPopup(popup_9695ef56a123f0aa3bac858ee54fe496)
+        ;
+
+        
+    
+    
+            var circle_marker_88ae886312753345c2254e0698820863 = L.circleMarker(
+                [54.236760000072, 18.377486],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_b6601fefa4783f26e8880419850bda34 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_a1a925b07d8bb8e21bc5a2e16a0442b5 = $(`<div id="html_a1a925b07d8bb8e21bc5a2e16a0442b5" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Przepompownia Leśna Osada 170/21, 170/29</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 LEŚNA OSADA, 83-047 POMLEWO, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 500 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 1,766.13 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 3.53 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_b6601fefa4783f26e8880419850bda34.setContent(html_a1a925b07d8bb8e21bc5a2e16a0442b5);
+            
+        
+
+        circle_marker_88ae886312753345c2254e0698820863.bindPopup(popup_b6601fefa4783f26e8880419850bda34)
+        ;
+
+        
+    
+    
+            var circle_marker_8f21c3564aca7151efa7cdd559f98668 = L.circleMarker(
+                [54.236615999928, 18.377486],
+                {"bubblingMouseEvents": true, "color": "#ef4444", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ef4444", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_ce7d19f5035d65082750d9119e327351 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_23a8f764781dc9bc6fd5fdca59e2f7bd = $(`<div id="html_23a8f764781dc9bc6fd5fdca59e2f7bd" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Przepompownia Leśna Osada 170/20</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 LEŚNA OSADA, 83-047 POMLEWO, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 222 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 1,195.41 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 5.38 zł/kWh</div>             <div style='margin-top:6px; color:#ef4444;'><i class='ri-error-warning-line' style='margin-right:4px;'></i><b>Wykryto anomalię</b></div>         </div>         </div>`)[0];
+                popup_ce7d19f5035d65082750d9119e327351.setContent(html_23a8f764781dc9bc6fd5fdca59e2f7bd);
+            
+        
+
+        circle_marker_8f21c3564aca7151efa7cdd559f98668.bindPopup(popup_ce7d19f5035d65082750d9119e327351)
+        ;
+
+        
+    
+    
+            var circle_marker_6375cc80aedd6992fc10265e5d5980ec = L.circleMarker(
+                [54.244387000072, 18.3656259],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_7abd520a0bcf260367bb11a36c485b13 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_1ed57ce5dd34b9dc2a870dfe187a0382 = $(`<div id="html_1ed57ce5dd34b9dc2a870dfe187a0382" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Przepompownia Jodłowska dz. 231</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 MARSZEWSKA GÓRA, 83-047 MARSZEWSKA GÓRA, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 5,718 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 9,178.33 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 1.61 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_7abd520a0bcf260367bb11a36c485b13.setContent(html_1ed57ce5dd34b9dc2a870dfe187a0382);
+            
+        
+
+        circle_marker_6375cc80aedd6992fc10265e5d5980ec.bindPopup(popup_7abd520a0bcf260367bb11a36c485b13)
+        ;
+
+        
+    
+    
+            var circle_marker_0385381ab876844d9bf40eb76f5fabb2 = L.circleMarker(
+                [54.244278999964, 18.365688253891427],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_dbed524fe463dbe27255ef84af19215f = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_ce763684f00263b9a5b4228b580e23cb = $(`<div id="html_ce763684f00263b9a5b4228b580e23cb" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Przepompownia Nad Rzeką dz. 335</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 MARSZEWSKA GÓRA, 83-047 MARSZEWSKA GÓRA, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 340 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 1,217.54 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 3.58 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_dbed524fe463dbe27255ef84af19215f.setContent(html_ce763684f00263b9a5b4228b580e23cb);
+            
+        
+
+        circle_marker_0385381ab876844d9bf40eb76f5fabb2.bindPopup(popup_dbed524fe463dbe27255ef84af19215f)
+        ;
+
+        
+    
+    
+            var circle_marker_8952fecc461a74df998a583339c15e85 = L.circleMarker(
+                [54.244278999964, 18.365563546108575],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_4c1c54344ea065aa0d4d6f239990e2b8 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_6d1a9447005e4281d617d1133b993935 = $(`<div id="html_6d1a9447005e4281d617d1133b993935" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Przepompownia Głowna dz. 180</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 MARSZEWSKA GÓRA, 83-047 MARSZEWSKA GÓRA, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 1,118 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 2,175.20 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 1.95 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_4c1c54344ea065aa0d4d6f239990e2b8.setContent(html_6d1a9447005e4281d617d1133b993935);
+            
+        
+
+        circle_marker_8952fecc461a74df998a583339c15e85.bindPopup(popup_4c1c54344ea065aa0d4d6f239990e2b8)
+        ;
+
+        
+    
+    
+            var circle_marker_1dfedeab82126660f8099ce8c81eaad0 = L.circleMarker(
+                [54.2456372, 18.3584771],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_45301caee26d6d71a6d4f3d92f78991c = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_d05d702139b68ecda74475d090c58711 = $(`<div id="html_d05d702139b68ecda74475d090c58711" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Nad Rzeką dz. 335</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 NAD RZEKĄ, 83-047 MARSZEWSKA GÓRA, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 256 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 301.69 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 1.18 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_45301caee26d6d71a6d4f3d92f78991c.setContent(html_d05d702139b68ecda74475d090c58711);
+            
+        
+
+        circle_marker_1dfedeab82126660f8099ce8c81eaad0.bindPopup(popup_45301caee26d6d71a6d4f3d92f78991c)
+        ;
+
+        
+    
+    
+            var circle_marker_f805212f651627fe19898f99622b9d27 = L.circleMarker(
+                [54.2457958, 18.3615247],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_3fb6e332b2b70feff7ec4ec61d788ffe = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_b71101c543f51949f71b0ae580c922ca = $(`<div id="html_b71101c543f51949f71b0ae580c922ca" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">PROSUMENT</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 GŁÓWNA, 83-047 MARSZEWSKA GÓRA, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 51,122 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 42,835.73 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 0.84 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_3fb6e332b2b70feff7ec4ec61d788ffe.setContent(html_b71101c543f51949f71b0ae580c922ca);
+            
+        
+
+        circle_marker_f805212f651627fe19898f99622b9d27.bindPopup(popup_3fb6e332b2b70feff7ec4ec61d788ffe)
+        ;
+
+        
+    
+    
+            var circle_marker_a934c83b0e8bcc8c1e7f3ab62c43b233 = L.circleMarker(
+                [54.246151600072004, 18.384073],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_61d82901baab70a5912efcbffab2fcd3 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_f9aeb84061d92bce84e340241c6ed068 = $(`<div id="html_f9aeb84061d92bce84e340241c6ed068" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Przepompownia Jodłowno 42/3</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 JODŁOWNO, 83-047 JODŁOWNO, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 470 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 1,342.16 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 2.86 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_61d82901baab70a5912efcbffab2fcd3.setContent(html_f9aeb84061d92bce84e340241c6ed068);
+            
+        
+
+        circle_marker_a934c83b0e8bcc8c1e7f3ab62c43b233.bindPopup(popup_61d82901baab70a5912efcbffab2fcd3)
+        ;
+
+        
+    
+    
+            var circle_marker_71cfbeef2c73cd4adb1b41d1786010d4 = L.circleMarker(
+                [54.246007599928, 18.384073],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_07faebcd7a1b6ecab6f531f95bbb609e = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_1575e57a0d0dcf7653514cb0a70393f8 = $(`<div id="html_1575e57a0d0dcf7653514cb0a70393f8" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Przepompownia Leśna dz. 147/2</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 JODŁOWNO, 83-047 JODŁOWNO, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 610 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 1,848.82 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 3.03 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_07faebcd7a1b6ecab6f531f95bbb609e.setContent(html_1575e57a0d0dcf7653514cb0a70393f8);
+            
+        
+
+        circle_marker_71cfbeef2c73cd4adb1b41d1786010d4.bindPopup(popup_07faebcd7a1b6ecab6f531f95bbb609e)
+        ;
+
+        
+    
+    
+            var circle_marker_ef4f46fdc30afac3fc596f75887fd174 = L.circleMarker(
+                [54.246741300072, 18.3448923],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_fbe17a79ca8f37e30c1c1753574abe68 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_1f5ac86340d532065fe73c83c88037d5 = $(`<div id="html_1f5ac86340d532065fe73c83c88037d5" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Przepompownia Słowicza dz. 104/9</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 ZĄBRSKO GÓRNE, 83-047 ZĄBRSKO GÓRNE, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 460 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 1,479.18 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 3.22 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_fbe17a79ca8f37e30c1c1753574abe68.setContent(html_1f5ac86340d532065fe73c83c88037d5);
+            
+        
+
+        circle_marker_ef4f46fdc30afac3fc596f75887fd174.bindPopup(popup_fbe17a79ca8f37e30c1c1753574abe68)
+        ;
+
+        
+    
+    
+            var circle_marker_e561acd835ee7d241e14b7073df1b983 = L.circleMarker(
+                [54.246633299964, 18.344954653891428],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_d8f96fda54fc4d63dd5a8a8a43815498 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_f66d4b5e6960fda62835ca2b0cf47592 = $(`<div id="html_f66d4b5e6960fda62835ca2b0cf47592" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Przepompownia Na Wzgórze 103/25</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 ZĄBRSKO GÓRNE, 83-047 ZĄBRSKO GÓRNE, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 1,319 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 2,358.65 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 1.79 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_d8f96fda54fc4d63dd5a8a8a43815498.setContent(html_f66d4b5e6960fda62835ca2b0cf47592);
+            
+        
+
+        circle_marker_e561acd835ee7d241e14b7073df1b983.bindPopup(popup_d8f96fda54fc4d63dd5a8a8a43815498)
+        ;
+
+        
+    
+    
+            var circle_marker_14044ea74a42c502a95423243884315b = L.circleMarker(
+                [54.246633299964, 18.344829946108575],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_4a4c60995c615ba57e3b0e94717a2636 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_5c19a1ede00f3cf1aa286db52732a5bd = $(`<div id="html_5c19a1ede00f3cf1aa286db52732a5bd" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Przepompownia Rajska dz.77</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 ZĄBRSKO GÓRNE, 83-047 ZĄBRSKO GÓRNE, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 751 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 2,013.14 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 2.68 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_4a4c60995c615ba57e3b0e94717a2636.setContent(html_5c19a1ede00f3cf1aa286db52732a5bd);
+            
+        
+
+        circle_marker_14044ea74a42c502a95423243884315b.bindPopup(popup_4a4c60995c615ba57e3b0e94717a2636)
+        ;
+
+        
+    
+    
+            var circle_marker_3467b232c7a37702826c6cf8a9375b09 = L.circleMarker(
+                [54.2480078, 18.3858031],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_cb982715a010b12102a08ceab2721c63 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_e05b0cb03c1409f7b3e565257b575214 = $(`<div id="html_e05b0cb03c1409f7b3e565257b575214" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">OSP Jodłowno</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 KASZTANOWA, 83-047 JODŁOWNO, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 16,988 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 12,972.13 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 0.76 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_cb982715a010b12102a08ceab2721c63.setContent(html_e05b0cb03c1409f7b3e565257b575214);
+            
+        
+
+        circle_marker_3467b232c7a37702826c6cf8a9375b09.bindPopup(popup_cb982715a010b12102a08ceab2721c63)
+        ;
+
+        
+    
+    
+            var circle_marker_5a2e7d4851def35ccc89cc585de27cc2 = L.circleMarker(
+                [54.2483657, 18.3880199],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_34e0898ef31aef77bd2ed6262cd6654e = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_18c91ce23acc92b1ad15efeed1052d24 = $(`<div id="html_18c91ce23acc92b1ad15efeed1052d24" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">OŚWIETLENIE ULICZNE GMINNE</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 DĘBOWA, 83-047 JODŁOWNO, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 589 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 1,507.61 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 2.56 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_34e0898ef31aef77bd2ed6262cd6654e.setContent(html_18c91ce23acc92b1ad15efeed1052d24);
+            
+        
+
+        circle_marker_5a2e7d4851def35ccc89cc585de27cc2.bindPopup(popup_34e0898ef31aef77bd2ed6262cd6654e)
+        ;
+
+        
+    
+    
+            var circle_marker_78d3981b6b023c7e566fe9092d3c1ca6 = L.circleMarker(
+                [54.2492618, 18.3413838],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_9c705f5cdc21db61ce8482cf32775ab2 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_a29c7340c1d833ddf0fe4f3d55409a69 = $(`<div id="html_a29c7340c1d833ddf0fe4f3d55409a69" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Hydrofornia</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 RAJSKA, 83-047 ZĄBRSKO GÓRNE, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 32,927 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 29,146.82 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 0.89 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_9c705f5cdc21db61ce8482cf32775ab2.setContent(html_a29c7340c1d833ddf0fe4f3d55409a69);
+            
+        
+
+        circle_marker_78d3981b6b023c7e566fe9092d3c1ca6.bindPopup(popup_9c705f5cdc21db61ce8482cf32775ab2)
+        ;
+
+        
+    
+    
+            var circle_marker_f8d860241f731e150d013d9e30288bf6 = L.circleMarker(
+                [54.2503027, 18.3862916],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_59a8d105385ef269f6f02746d8891b0f = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_425f0451b526c0a0f1453cea3649885c = $(`<div id="html_425f0451b526c0a0f1453cea3649885c" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Przepompownia Cmentarna dz. 29</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 CMENTARNA, 83-047 JODŁOWNO, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 800 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 2,081.49 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 2.60 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_59a8d105385ef269f6f02746d8891b0f.setContent(html_425f0451b526c0a0f1453cea3649885c);
+            
+        
+
+        circle_marker_f8d860241f731e150d013d9e30288bf6.bindPopup(popup_59a8d105385ef269f6f02746d8891b0f)
+        ;
+
+        
+    
+    
+            var circle_marker_8807d339c19d7736db9911800610d0fe = L.circleMarker(
+                [54.2513305, 18.381109],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b749d0f0be73db39446073be5aab5418);
+        
+    
+        var popup_9f30678563bfb576eeb8dca73517779d = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_f8e9f194bfaca759a614a4e701fb70cd = $(`<div id="html_f8e9f194bfaca759a614a4e701fb70cd" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; min-width:260px; line-height:1.6; color:#0f172a;">             <b style="font-size:15px;">Przepompownia Polna 16/2</b><br>             <div style="color:#64748b; margin-bottom:6px;">                 <i class="ri-map-pin-2-line" style="font-size:1rem; vertical-align:middle; margin-right:4px;"></i>                 POLNA, 83-047 JODŁOWNO, Polska             </div>             <div><i class="ri-flashlight-line" style="color:#475569; margin-right:6px;"></i><b>Zużycie:</b> 618 kWh</div>             <div><i class="ri-money-euro-circle-line" style="color:#475569; margin-right:6px;"></i><b>Koszt:</b> 1,681.18 zł</div>             <div><i class="ri-line-chart-line" style="color:#475569; margin-right:6px;"></i><b>Stawka:</b> 2.72 zł/kWh</div>                      </div>         </div>`)[0];
+                popup_9f30678563bfb576eeb8dca73517779d.setContent(html_f8e9f194bfaca759a614a4e701fb70cd);
+            
+        
+
+        circle_marker_8807d339c19d7736db9911800610d0fe.bindPopup(popup_9f30678563bfb576eeb8dca73517779d)
+        ;
+
+        
+    
+    
+            marker_cluster_b749d0f0be73db39446073be5aab5418.addTo(map_b692fa9ecec70643b805731c479f53df);
+        
+</script>
+
+    <style>
+        html, body {
+            overflow: hidden !important;
+        }
+        .leaflet-container {
+            overflow: hidden !important;
+        }
+        .leaflet-control-attribution {
+            display: none !important;   /* ✅ ukrywa napis Leaflet / OSM / Carto */
+        }
+    </style>
+    </body></html>

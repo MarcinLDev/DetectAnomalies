@@ -1,0 +1,29 @@
+/* === UKŁAD GRID DLA KAFELKÓW KPI === */
+.kpi-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  justify-content: center;
+  align-items: stretch;
+  margin-bottom: 1.2rem;
+}
+
+/* === DOPASOWANIE WYKRESU DO SZEROKOŚCI KONTAINERA === */
+.chart-container {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 0.8rem 4rem 5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Wymuś pełną szerokość dla komponentu wykresu (Plotly / ECharts / Dash) */
+.chart-container .echarts-for-react,
+.chart-container > div,
+.chart-container dcc-graph,
+.chart-container .js-plotly-plot {
+  width: 100% !important;
+  max-width: 100% !important;
+}

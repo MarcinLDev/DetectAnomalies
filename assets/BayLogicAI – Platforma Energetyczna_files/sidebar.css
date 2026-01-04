@@ -1,0 +1,136 @@
+/* === BAYLOGICAI SIDEBAR === */
+.sidebar {
+    background: #111827;
+    color: #E5E7EB;
+    width: 240px;
+    height: 100vh;
+    position: fixed;
+    top: 0; left: 0;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease;
+    box-shadow: 2px 0 6px rgba(0,0,0,0.25);
+    z-index: 999;
+}
+
+/* --- Header --- */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.sidebar-logo {
+    width: 140px;
+    transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.sidebar-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #f1f5f9;
+    margin-left: 0.5rem;
+    transition: opacity 0.3s ease;
+}
+
+/* --- Menu --- */
+.sidebar-menu {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0 0.75rem;
+}
+
+/* Link w menu */
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.65rem 0.85rem;
+    border-radius: 8px;
+    color: #E5E7EB;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    font-weight: 500;
+    font-size: 0.95rem;
+    justify-content: flex-start;  /* 👈 wyrównanie do lewej */
+}
+
+/* Ikona */
+.sidebar-icon {
+    font-size: 1.25rem;
+    width: 26px;
+    text-align: center;
+    color: #cbd5e1;
+}
+
+/* Hover efekt */
+.sidebar-link:hover {
+    background: rgba(37, 99, 235, 0.12); /* delikatny niebieski akcent */
+    transform: translateX(3px);
+    color: #FFFFFF;
+}
+
+/* --- Aktywna zakładka --- */
+.sidebar-link.active {
+    background: linear-gradient(90deg, rgba(37,99,235,0.15), rgba(37,99,235,0.05));
+    border-left: 3px solid #2563EB;
+    color: #FFFFFF;
+    font-weight: 600;
+    box-shadow: inset 0 0 4px rgba(0,0,0,0.15);
+}
+
+/* Ikona aktywna — jaśniejsza */
+.sidebar-link.active .sidebar-icon {
+    color: #60a5fa;
+}
+
+/* --- Stopka / toggle --- */
+.sidebar-footer {
+    text-align: center;
+    padding: 1rem;
+}
+
+.sidebar-toggle {
+    background: #1e293b;
+    color: #E5E7EB;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    width: 36px; height: 36px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+    background: #334155;
+    transform: scale(1.08);
+}
+
+/* --- Collapsed Sidebar --- */
+.sidebar.collapsed {
+    width: 72px;
+}
+
+.sidebar.collapsed .sidebar-title,
+.sidebar.collapsed .sidebar-text {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar.collapsed .sidebar-logo {
+    width: 40px;
+    opacity: 1;
+}
+
+/* --- Content offset --- */
+.content {
+    margin-left: 240px;
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar.collapsed ~ .content {
+    margin-left: 72px;
+}
