@@ -99,7 +99,8 @@ W zakresie projektu:
 - logika biznesowa predykcji ryzyka
 - interfejs użytkownika i wizualizacja wyników
 - raportowanie
-- Poza zakresem projektu:
+
+## Poza zakresem projektu:
 - produkcyjne pipeline’y danych (ETL / Airflow)
 - wdrożenie chmurowe
 - monitoring i MLOps
