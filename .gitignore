@@ -1,11 +1,6 @@
-# Assets / UI exports
-assets/
+# Ignore all assets by default
+assets/*
 
-# Python cache
-__pycache__/
-*.pyc
-
-# IDE / OS
-.vscode/
-.idea/
-.DS_Store
+# But keep screenshots for README
+!assets/screens/
+!assets/screens/**
